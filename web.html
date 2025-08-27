@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rushald Estate</title>
+<link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet">
+<style>
+/* Global Styles */
+body { margin:0; padding:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f5f5f5; }
+header { background:#007bff; color:white; padding:20px; text-align:center; position: sticky; top:0; z-index:1000; }
+header nav a { color:white; margin: 0 15px; text-decoration:none; font-weight:bold; transition:0.3s; }
+header nav a:hover { text-decoration: underline; }
+
+/* Hero Banner */
+.hero { background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; height:80vh; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; color:white; }
+.hero h1 { font-size:60px; margin:0; text-shadow:2px 2px 6px rgba(0,0,0,0.6);}
+.hero p { font-size:24px; margin:10px 0; text-shadow:1px 1px 4px rgba(0,0,0,0.6);}
+.hero input { padding:15px; width:300px; border:none; border-radius:5px; margin-top:20px; }
+.hero button { padding:15px 25px; margin-left:10px; background:#ff5722; border:none; border-radius:5px; color:white; font-weight:bold; cursor:pointer; transition:0.3s; }
+.hero button:hover { background:#e64a19; }
+
+/* Container */
+.container { max-width:1200px; margin:auto; padding:20px; }
+
+/* Property Section */
+.properties { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:30px;}
+.property { background:white; border-radius:15px; overflow:hidden; width:300px; box-shadow:0 8px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+.property:hover { transform: translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.2); }
+.property img { width:100%; height:200px; object-fit:cover; }
+.property-content { padding:15px; }
+.property-content h3 { color:#007bff; margin:0 0 10px 0; }
+.property-content p { margin:5px 0; color:#555; }
+.property-content button { margin-top:10px; width:100%; padding:10px; background:#007bff; border:none; border-radius:5px; color:white; cursor:pointer; }
+.property-content button:hover { background:#0056b3; }
+
+/* Testimonials */
+.testimonials { background:#fff; padding:50px 20px; border-radius:15px; margin:40px 0; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+.testimonial { margin:20px 0; font-style:italic; color:#555; }
+.testimonial h4 { color:#ff5722; margin-top:10px; }
+
+/* Contact Form */
+form { background:white; padding:30px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); max-width:600px; margin:auto; }
+input, textarea { width:100%; padding:12px; margin:10px 0; border-radius:5px; border:1px solid #ccc; font-size:16px; }
+button.submit { width:100%; padding:12px; background:#ff5722; border:none; border-radius:5px; color:white; font-weight:bold; cursor:pointer; transition:0.3s; }
+button.submit:hover { background:#e64a19; }
+
+/* Footer */
+footer { background:#333; color:white; text-align:center; padding:20px; margin-top:40px; }
+
+/* Responsive */
+@media (max-width:768px){
+  .properties { flex-direction: column; align-items:center; }
+  .hero h1 { font-size:40px; }
+  .hero p { font-size:18px; }
+  .hero input { width:80%; margin-top:15px; }
+  .hero button { margin-left:5px; margin-top:15px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Rushald Estate</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#properties">Properties</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <h1>Find Your Dream Home</h1>
+  <p>Luxury & Affordable Properties Across the City</p>
+  <div>
+    <input type="text" placeholder="Search Location or Property">
+    <button>Search</button>
+  </div>
+</div>
+
+<div class="container" id="properties">
+  <h2 style="text-align:center; margin-bottom:30px;">Featured Properties</h2>
+  <div class="properties">
+    <div class="property">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Luxury Villa">
+      <div class="property-content">
+        <h3>Luxury Villa</h3>
+        <p>Location: Mumbai</p>
+        <p>Price: ₹5 Crore</p>
+        <button>Contact Now</button>
+      </div>
+    </div>
+    <div class="property">
+      <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=800&q=80" alt="Modern Apartment">
+      <div class="property-content">
+        <h3>Modern Apartment</h3>
+        <p>Location: Pune</p>
+        <p>Price: ₹1.5 Crore</p>
+        <button>Contact Now</button>
+      </div>
+    </div>
+    <div class="property">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cozy Bungalow">
+      <div class="property-content">
+        <h3>Cozy Bungalow</h3>
+        <p>Location: Nashik</p>
+        <p>Price: ₹2.2 Crore</p>
+        <button>Contact Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonials" id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial">
+    <p>"Rushald Estate helped me find my dream home in Mumbai! Highly recommended."</p>
+    <h4>- Gopal Sapkal</h4>
+  </div>
+  <div class="testimonial">
+    <p>"Amazing service and quick responses. Found my apartment in Pune easily."</p>
+    <h4>- Narendra modi</h4>
+  </div>
+</div>
+
+<div id="contact" class="container">
+  <h2 style="text-align:center; margin-bottom:20px;">Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" class="submit">Send Message</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 Rushald Estate. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
